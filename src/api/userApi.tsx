@@ -17,6 +17,11 @@ const userApi = {
     const url = `/user/${id}`;
     return axiosClient.put(url, updateuser);
   },
+
+  resetEmail: (email: Object) => {
+    const url = `/auth/request-reset-email/`;
+    return axiosClient.post(url, email);
+  },
 };
 
 export default userApi;
